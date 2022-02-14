@@ -1,0 +1,98 @@
+const countryData = [
+  {
+    "name": "Bangladesh",
+    "subregion": "Southern Asia",
+    "population": "164,689,383",
+    "image": "bangladesh.png",
+  },
+  {
+    "name": "China",
+    "subregion": "Eastern Asia",
+    "population": "1,439,323,776",
+    "image": "china.png",
+  },
+  {
+    "name": "India",
+    "subregion": "Southern Asia",
+    "population": "1,380,004,385",
+    "image": "india.png",
+  },
+  {
+    "name": "Indonesia",
+    "subregion": "South-Eastern Asia",
+    "population": "273,523,615",
+    "image": "indonesia.png",
+  },
+  {
+    "name": "Japan",
+    "subregion": "Eastern Asia",
+    "population": "126,476,461",
+    "image": "japan.png",
+  },
+  {
+    "name": "Philippines",
+    "subregion": "South-Eastern Asia",
+    "population": "109,581,078",
+    "image": "philippines.png",
+  },
+  {
+    "name": "Vietnam",
+    "subregion": "South-Eastern Asia",
+    "population": "97,338,579",
+    "image": "vietnam.png",
+  },
+  {
+    "name": "Turkey",
+    "subregion": "Western Asia",
+    "population": "84,339,067",
+    "image": "turkey.png",
+  },
+  {
+    "name": "Iran",
+    "subregion": "Southern Asia",
+    "population": "83,992,949",
+    "image": "iran.png",
+  },
+  {
+    "name": "Thailand",
+    "subregion": "South-Eastern Asia",
+    "population": "69,799,978",
+    "image": "thailand.png",
+  },
+  {
+    "name": "Myanmar",
+    "subregion": "South-Eastern Asia",
+    "population": "54,409,800",
+    "image": "myanmar.png",
+  },
+  {
+    "name": "South Korea",
+    "subregion": "Eastern Asia",
+    "population": "51,269,185",
+    "image": "south korea.png",
+  },
+  {
+    "name": "Iraq",
+    "subregion": "Western Asia",
+    "population": "40,222,493",
+    "image": "iraq.png",
+  },
+  {
+    "name": "Afghanistan",
+    "subregion": "38,928,346",
+    "population": "Southern Asia",
+    "image": "afghanistan.png",
+  },
+  {
+    "name": "Saudi Arabia",
+    "subregion": "	Western Asia",
+    "population": "	34,813,871",
+    "image": "saudi arabia.png",
+  },
+  {
+    "name": "Malaysia",
+    "subregion": "South-Eastern Asia",
+    "population": "32,365,999",
+    "image": "malaysia.png",
+  },
+];
