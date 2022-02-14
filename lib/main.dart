@@ -37,56 +37,63 @@ class _MyHomePageState extends State<MyHomePage> {
     List<dynamic> responseList = countryData;
     List<Widget> listItems = [];
     for (var post in responseList) {
-      listItems.add(Container(
-          height: 150,
-          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
-              ]),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      post["name"],
-                      style: const TextStyle(
-                          fontSize: 28, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      post["subregion"],
-                      style: const TextStyle(fontSize: 17, color: Colors.grey),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      post["population"],
-                      style: const TextStyle(
-                          fontSize: 22,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-                Card(
-                  child: Image.asset(
-                    "assets/${post["image"]}",
-                    height: 58,
-                    width: 100,
-                    fit: BoxFit.fitWidth,
+      listItems.add(TextButton(
+        onPressed: () {},
+        child: Container(
+            height: 150,
+            decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black.withAlpha(100), blurRadius: 10.0),
+                ]),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        post["name"],
+                        style: const TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                      Text(
+                        post["subregion"],
+                        style:
+                            const TextStyle(fontSize: 17, color: Colors.grey),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        post["population"],
+                        style: const TextStyle(
+                            fontSize: 22,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
-                  elevation: 18.0,
-                )
-              ],
-            ),
-          )));
+                  Card(
+                    child: Image.asset(
+                      "assets/${post["image"]}",
+                      height: 58,
+                      width: 100,
+                      fit: BoxFit.fitWidth,
+                    ),
+                    elevation: 18.0,
+                  )
+                ],
+              ),
+            )),
+      ));
     }
     setState(() {
       itemsData = listItems;
@@ -225,36 +232,38 @@ class RegionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 150,
-      margin: const EdgeInsets.only(right: 20),
-      height: categoryHeight,
-      decoration: BoxDecoration(
-        color: regionColor,
-        borderRadius: const BorderRadius.all(
-          Radius.circular(20.0),
+    return TextButton(
+      onPressed: () {},
+      child: Container(
+        width: 150,
+        height: categoryHeight,
+        decoration: BoxDecoration(
+          color: regionColor,
+          borderRadius: const BorderRadius.all(
+            Radius.circular(20.0),
+          ),
         ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Text(
-              "$regionName\nRegion",
-              style: const TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              "$countries Countries",
-              style: const TextStyle(fontSize: 18, color: Colors.white),
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Text(
+                "$regionName\nRegion",
+                style: const TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                "$countries Countries",
+                style: const TextStyle(fontSize: 18, color: Colors.white),
+              ),
+            ],
+          ),
         ),
       ),
     );
