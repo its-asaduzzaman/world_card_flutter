@@ -13,7 +13,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<Widget> asianRegionData = [];
 
-  void getPostsData() {
+  void getAsiaData() {
     List<dynamic> responseList = countryData;
     List<Widget> listItems = [];
     for (var post in responseList) {
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    getPostsData();
+    getAsiaData();
   }
 
   @override
